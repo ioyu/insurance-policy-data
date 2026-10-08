@@ -4,6 +4,8 @@ import json
 import sys
 from pathlib import Path
 
+import pytest
+
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 
@@ -153,12 +155,95 @@ def test_validate_missing_required_field(tmp_path):
     assert any("version" in e for e in validate.validate(built(tmp_path, documents=[bad])))
 
 
-def test_validate_bad_manifest_path(tmp_path):
+@pytest.mark.parametrize("path", ["../x.json", "/x.json", "a\\b.json", "", "c:x.json", "a/../b.json"])
+def test_validate_bad_manifest_path(tmp_path, path):
     root = built(tmp_path)
     manifest = json.loads((root / "manifest.json").read_bytes())
-    manifest["files"].append({"path": "../x.json", "sha256": SHA, "size": 1})
+    manifest["files"].append({"path": path, "sha256": SHA, "size": 1})
     write(root, "manifest.json", manifest)
     assert any("bad path" in e for e in validate.validate(root))
+
+
+def test_validate_manifest_path_not_a_string(tmp_path):
+    root = built(tmp_path)
+    manifest = json.loads((root / "manifest.json").read_bytes())
+    manifest["files"].append({"path": 3, "sha256": SHA, "size": 1})
+    write(root, "manifest.json", manifest)
+    assert any("bad path" in e for e in validate.validate(root))
+
+
+def test_validate_manifest_files_not_a_list(tmp_path):
+    root = built(tmp_path)
+    manifest = json.loads((root / "manifest.json").read_bytes())
+    manifest["files"] = {"path": "companies.json"}
+    write(root, "manifest.json", manifest)
+    assert any("files" in e and "array" in e for e in validate.validate(root))
+
+
+def test_validate_manifest_entry_not_an_object(tmp_path):
+    root = built(tmp_path)
+    manifest = json.loads((root / "manifest.json").read_bytes())
+    manifest["files"].append("companies.json")
+    write(root, "manifest.json", manifest)
+    assert any("not a JSON object" in e for e in validate.validate(root))
+
+
+def test_validate_manifest_not_an_object(tmp_path):
+    root = built(tmp_path)
+    write(root, "manifest.json", [])
+    assert any("manifest.json" in e and "object" in e for e in validate.validate(root))
+
+
+@pytest.mark.parametrize("field", ["id", "name"])
+def test_validate_company_missing_field(tmp_path, field):
+    root = built(tmp_path)
+    company = {"id": "c1", "name": "測試人壽"}
+    del company[field]
+    write(root, "companies.json", [company])
+    assert any("companies" in e and f"missing {field}" in e for e in validate.validate(root))
+
+
+def test_validate_company_name_not_a_string(tmp_path):
+    root = built(tmp_path)
+    write(root, "companies.json", [{"id": "c1", "name": 1}])
+    assert any("name must be a string" in e for e in validate.validate(root))
+
+
+def test_validate_company_entry_not_an_object(tmp_path):
+    root = built(tmp_path)
+    write(root, "companies.json", [{"id": "c1", "name": "測試人壽"}, "c2"])
+    assert any("companies.json" in e and "not a JSON object" in e for e in validate.validate(root))
+
+
+def test_validate_companies_not_a_list(tmp_path):
+    root = built(tmp_path)
+    write(root, "companies.json", {"id": "c1"})
+    assert any("companies.json" in e and "array" in e for e in validate.validate(root))
+
+
+@pytest.mark.parametrize("field", ["id", "company_id", "name"])
+def test_validate_product_missing_field(tmp_path, field):
+    product = {"id": "p1", "company_id": "c1", "name": "商品"}
+    del product[field]
+    errors = validate.validate(built(tmp_path, products=[product]))
+    assert any("products" in e and f"missing {field}" in e for e in errors)
+
+
+def test_validate_product_name_not_a_string(tmp_path):
+    errors = validate.validate(
+        built(tmp_path, products=[{"id": "p1", "company_id": "c1", "name": None}])
+    )
+    assert any("name must be a string" in e for e in errors)
+
+
+def test_validate_product_entry_not_an_object(tmp_path):
+    errors = validate.validate(built(tmp_path, products=[{"id": "p1", "company_id": "c1", "name": "商品"}, 7]))
+    assert any("products/c1.json" in e and "not a JSON object" in e for e in errors)
+
+
+def test_validate_document_field_not_a_string(tmp_path):
+    errors = validate.validate(built(tmp_path, documents=[document(version=20260701)]))
+    assert any("version must be a string" in e for e in errors)
 
 
 def test_validate_missing_file(tmp_path):
