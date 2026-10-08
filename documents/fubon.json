@@ -1,0 +1,44 @@
+[
+  {
+    "id": "fubon-ajc1-v20260122",
+    "company_id": "fubon",
+    "product_id": "ajc1",
+    "name": "富邦人壽新享平安終身保險條款",
+    "version": "2026-01-22",
+    "effective_date": "2026-01-22",
+    "document_type": "policy_terms",
+    "source_url": "https://www.fubon.com/life/cms/A9DDD9DF28AF46C78F453A1D85C80AB3/2026-01/202601201106092112818596.pdf",
+    "file_name": "202601201106092112818596.pdf",
+    "file_size": 838269,
+    "sha256": "99284740feb48a7af76a768019de9616fad1f8fd0571cb59a89cf81ddcad7864",
+    "status": "active"
+  },
+  {
+    "id": "fubon-xlx4-v20250101",
+    "company_id": "fubon",
+    "product_id": "xlx4",
+    "name": "富邦人壽真享福平準終身壽險條款",
+    "version": "2025-01-01",
+    "effective_date": "2025-01-01",
+    "document_type": "policy_terms",
+    "source_url": "https://www.fubon.com/life/cms/A2FAC0829D84413ABFA0CF973FF2651B/2024-12/202412271442045200321369.pdf",
+    "file_name": "202412271442045200321369.pdf",
+    "file_size": 743263,
+    "sha256": "f0f9426f7a0acf2bb0910e001d0614888c9c533b4206cc4157c93799215808b5",
+    "status": "active"
+  },
+  {
+    "id": "fubon-aji-v20250811",
+    "company_id": "fubon",
+    "product_id": "aji",
+    "name": "富邦人壽安康如意終身保險條款",
+    "version": "2025-08-11",
+    "effective_date": "2025-08-11",
+    "document_type": "policy_terms",
+    "source_url": "https://www.fubon.com/life/cms/CFF3BC0403144F5AA5B85D2E6D2B3B93/2025-08/202508221536529287361610.pdf",
+    "file_name": "202508221536529287361610.pdf",
+    "file_size": 463790,
+    "sha256": "948a5428d67ad21c84aed194b0effda06c05804c54c6be6e13921bc5f8ba0fe4",
+    "status": "active"
+  }
+]

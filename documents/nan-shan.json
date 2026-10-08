@@ -1,0 +1,58 @@
+[
+  {
+    "id": "nan-shan-aota-v20241201",
+    "company_id": "nan-shan",
+    "product_id": "aota",
+    "name": "南山人壽安心HIGH玩海外旅行平安保險條款",
+    "version": "2024-12-01",
+    "effective_date": "2024-12-01",
+    "document_type": "policy_terms",
+    "source_url": "https://www.nanshanlife.com.tw/nanshanlife/nanshanlife-info/Products/rule/policy_eTA09.pdf",
+    "file_name": "policy_eTA09.pdf",
+    "file_size": 892410,
+    "sha256": "f11821963cb6ab73d98bb495ad5d7314d1d5b69783710eb7efaf9e9bfa0c67b4",
+    "status": "active"
+  },
+  {
+    "id": "nan-shan-akms-v20241201",
+    "company_id": "nan-shan",
+    "product_id": "akms",
+    "name": "南山人壽陪童HIGH玩海外特定醫療旅行平安保險條款",
+    "version": "2024-12-01",
+    "effective_date": "2024-12-01",
+    "document_type": "policy_terms",
+    "source_url": "https://www.nanshanlife.com.tw/nanshanlife/nanshanlife-info/Products/rule/policy_eTA08.pdf",
+    "file_name": "policy_eTA08.pdf",
+    "file_size": 523032,
+    "sha256": "30175f11645218670d95a0c2ab3732ff1ff3f5c63ebebe4b8e1bd2b7ad2df802",
+    "status": "active"
+  },
+  {
+    "id": "nan-shan-nesta-v20241201",
+    "company_id": "nan-shan",
+    "product_id": "nesta",
+    "name": "南山人壽網路投保安心旅行平安保險條款",
+    "version": "2024-12-01",
+    "effective_date": "2024-12-01",
+    "document_type": "policy_terms",
+    "source_url": "https://www.nanshanlife.com.tw/nanshanlife/nanshanlife-info/Products/rule/policy_eTA04.pdf",
+    "file_name": "policy_eTA04.pdf",
+    "file_size": 895342,
+    "sha256": "ba857c590c4e4246e4575df00820db449982181187014c516ee40f0202c4698d",
+    "status": "active"
+  },
+  {
+    "id": "nan-shan-aat-v20240901",
+    "company_id": "nan-shan",
+    "product_id": "aat",
+    "name": "南山人壽享HIGH玩海外醫療專機運送附加條款",
+    "version": "2024-09-01",
+    "effective_date": "2024-09-01",
+    "document_type": "policy_terms",
+    "source_url": "https://www.nanshanlife.com.tw/nanshanlife/nanshanlife-info/Products/rule/policy_eTA10.pdf",
+    "file_name": "policy_eTA10.pdf",
+    "file_size": 317281,
+    "sha256": "38ec5e7ac24091c308fda832097993d0f9275bc61eb3327f154e0773d25da2c4",
+    "status": "active"
+  }
+]

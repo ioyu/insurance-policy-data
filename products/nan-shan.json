@@ -1,0 +1,34 @@
+[
+  {
+    "id": "aota",
+    "company_id": "nan-shan",
+    "name": "南山人壽安心HIGH玩海外旅行平安保險",
+    "product_code": "AOTA",
+    "category": "旅行平安",
+    "status": "active"
+  },
+  {
+    "id": "akms",
+    "company_id": "nan-shan",
+    "name": "南山人壽陪童HIGH玩海外特定醫療旅行平安保險",
+    "product_code": "AKMS",
+    "category": "旅行平安",
+    "status": "active"
+  },
+  {
+    "id": "nesta",
+    "company_id": "nan-shan",
+    "name": "南山人壽網路投保安心旅行平安保險",
+    "product_code": "NESTA",
+    "category": "旅行平安",
+    "status": "active"
+  },
+  {
+    "id": "aat",
+    "company_id": "nan-shan",
+    "name": "南山人壽享HIGH玩海外醫療專機運送附加條款",
+    "product_code": "AAT",
+    "category": "附加條款",
+    "status": "active"
+  }
+]

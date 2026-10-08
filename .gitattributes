@@ -1,0 +1,2 @@
+# manifest 記錄每個檔案 bytes 的 sha256；不得做換行轉換。
+*.json -text

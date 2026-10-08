@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "data_version": 2026100801,
+  "generated_at": "2026-10-08T02:35:58Z",
+  "files": [
+    {
+      "path": "companies.json",
+      "sha256": "e08f264a79adccc8dbd82cf09d9df3a99148ff5bea5117f3393f5580d19a96f0",
+      "size": 275
+    },
+    {
+      "path": "documents/fubon.json",
+      "sha256": "33b128d1cef49fb83277f0913cca228a2966cea39dba3c4b8c6edd1bc9002d85",
+      "size": 1675
+    },
+    {
+      "path": "documents/nan-shan.json",
+      "sha256": "299395beaf24932ec59722410dc65a7b6a671bca57c791635d97a39c9b988d56",
+      "size": 2233
+    },
+    {
+      "path": "products/fubon.json",
+      "sha256": "32b4b0fa8af1b3275adc5813ea1beafcd99bb04f74ecf4e412731c7fc2ccefe9",
+      "size": 565
+    },
+    {
+      "path": "products/nan-shan.json",
+      "sha256": "4338b85cea038cf391f18f5ae9dc9cf7e6e37e3d58cf78dda70271501078ea98",
+      "size": 843
+    }
+  ]
+}

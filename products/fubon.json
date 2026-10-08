@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ajc1",
+    "company_id": "fubon",
+    "name": "富邦人壽新享平安終身保險",
+    "product_code": "AJC1",
+    "category": "終身保險",
+    "status": "active"
+  },
+  {
+    "id": "xlx4",
+    "company_id": "fubon",
+    "name": "富邦人壽真享福平準終身壽險",
+    "product_code": "XLX4",
+    "category": "壽險",
+    "status": "active"
+  },
+  {
+    "id": "aji",
+    "company_id": "fubon",
+    "name": "富邦人壽安康如意終身保險",
+    "product_code": "AJI",
+    "category": "終身保險",
+    "status": "active"
+  }
+]
